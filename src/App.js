@@ -10,6 +10,7 @@ function App() {
   // lizardSize should be a number that starts out as 10
   const [lizardSize, setLizardSize] = useState(10);
   // alienSize should be a number that starts out as 10
+  const [alienSize, setAlienSize] = useState(10);
   // traffic is complicated. It should be an array of strings that starts out as ['car', 'truck']
 
 
@@ -22,7 +23,7 @@ function App() {
           <img src="alien.png" width={20} />
           <div className='buttons'>
             {/* when you click this button, the alien's size in state should go up by one */}
-            <button>Oh no! The alien is gobblin up all the electricity!</button>
+            <button onClick={() => setAlienSize(alienSize + 1)}>Oh no! The alien is gobblin up all the electricity!</button>
             {/* when you click this button, the lizard's size in state should go down by one */}
             <button onClick={() => setLizardSize(lizardSize - 1)}>Amazing! The alien zapped the lizard!</button>
           </div>
@@ -33,8 +34,8 @@ function App() {
           <div className="buttons">
             {/* when you click this button, the lizard's size in state should go up by one */}
             <button onClick={() => setLizardSize(lizardSize + 1)}>Yegads! The lizard is ramping up to its final form!</button>
-            {/* when you click this button, the alien's size in state should go up by one */}
-            <button>Oh my! The lizard chomped down on the alien!</button>
+            {/* when you click this button, the alien's size in state should go down by one */}
+            <button onClick={() => setAlienSize(alienSize - 1)}>Oh my! The lizard chomped down on the alien!</button>
           </div>
         </div>
       </div>
