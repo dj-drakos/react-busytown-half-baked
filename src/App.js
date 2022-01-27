@@ -11,6 +11,8 @@ function App() {
   // alienSize should be a number that starts out as 10
   // traffic is complicated. It should be an array of strings that starts out as ['car', 'truck']
 
+
+
   return (
     <div className="App">
       <div className="fight">
@@ -35,7 +37,7 @@ function App() {
           </div>
         </div>
       </div>
-      <TrafficLight color={lightColor} />
+      <TrafficLight lightColor={lightColor} />
       <div className="buttons">
         {/* when you click this button, the color of the light in state should be set to 'red' */}
         <button onClick={() => setLightColor('red')}>Red</button>
