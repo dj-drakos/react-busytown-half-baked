@@ -8,6 +8,7 @@ function App() {
   // lightColor should be a string that starts out as 'red'
   const [lightColor, setLightColor] = useState('red');
   // lizardSize should be a number that starts out as 10
+  const [lizardSize, setLizardSize] = useState(10);
   // alienSize should be a number that starts out as 10
   // traffic is complicated. It should be an array of strings that starts out as ['car', 'truck']
 
@@ -23,7 +24,7 @@ function App() {
             {/* when you click this button, the alien's size in state should go up by one */}
             <button>Oh no! The alien is gobblin up all the electricity!</button>
             {/* when you click this button, the lizard's size in state should go down by one */}
-            <button >Amazing! The alien zapped the lizard!</button>
+            <button onClick={() => setLizardSize(lizardSize - 1)}>Amazing! The alien zapped the lizard!</button>
           </div>
         </div>
         <div className="monster">
@@ -31,7 +32,7 @@ function App() {
           <img src="lizard.png" width={20} />
           <div className="buttons">
             {/* when you click this button, the lizard's size in state should go up by one */}
-            <button>Yegads! The lizard is ramping up to its final form!</button>
+            <button onClick={() => setLizardSize(lizardSize + 1)}>Yegads! The lizard is ramping up to its final form!</button>
             {/* when you click this button, the alien's size in state should go up by one */}
             <button>Oh my! The lizard chomped down on the alien!</button>
           </div>
